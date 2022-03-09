@@ -6,15 +6,15 @@ A data structure is a collection of data items in a memory of a running program 
 An algorithm is a logical sequence of discrete steps that describes a complete solution to a given problem commutable in a finite amount of time and space.
 
 
-Data structures covered:
-list
-stack
-queue
-tree
-binary tree
-hash table
+## Data structures covered:
+`list`
+`stack`
+`queue`
+`tree`
+`binary tree`
+`hash table`
 
-Other data structures:
+## Other data structures:
 
-many different types of trees
-many different types of graphs
+`many different types of trees`
+`many different types of graphs`
