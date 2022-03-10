@@ -4,7 +4,9 @@
  */
 package nyu.nyu;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
 /**
  *
@@ -94,9 +96,52 @@ public class JavaArrays {
         System.out.println("================================================");
         
         
-        int array[]={33,3,4,5};//declaring and initializing an array  
-        min(array);//passing array to method  
+        //are two arrays equal
+        System.out.println("are arrays equal? ");
+        areAraysEqual(unsorted_array,unsorted_array);
+        System.out.println("================================================");
         
+        
+        
+        int array[]={33,3,4,5};//declaring and initializing an array  
+        min(array);//passing array to method 
+        System.out.println("================================================");
+        
+        
+        //looping through lists
+        ArrayList<String> aL = new ArrayList<>();
+        String [] strings = {"wheels", "on", "the", "bus"};
+        //using for
+        for (int i = 0; i < strings.length; i++) {
+            aL.add(strings[i]);
+        }
+        System.out.println("================================================");
+        
+        
+        System.out.print("Using for loop with .get() method [" );
+        for (int i = 0; i < aL.size(); i++ ) {
+            System.out.print(aL.get(i)+ ", ");
+        }
+        System.out.println("]");
+        System.out.println("================================================");
+        
+        System.out.print("Using an iterator [" );
+        Iterator<String> itr = aL.iterator();
+//        while (itr.hasNext()){
+//            System.out.print(itr.next()+", " );
+//        }
+        System.out.println("]");
+        System.out.println("================================================");
+        
+       
+        System.out.println(itr.next() );
+        itr.next();
+        System.out.println(itr.next() );
+        Iterator<String> itr1 = aL.iterator();
+        Iterator<String> itr2 = aL.iterator();
+        System.out.println(itr1.next());
+        System.out.println(itr2.next());
+        System.out.println(itr.next());
 
     }
     
@@ -180,4 +225,42 @@ public class JavaArrays {
             System.out.println(key +" is located at "+getIndex+" index");
         }
     }
+    
+    static void areAraysEqual(int a[], int b[]){
+         // store the result
+        boolean result = true;
+  
+        // Check if length of the two arrays are equal or not
+        if (a.length == b.length) {
+            // Loop to check elements of arrays one by one
+            for (int i = 0; i < a.length; i = i + 1) { 
+                // To check if any element is different
+                if (a[i] != b[i]) { 
+                    // If any element is different then it will assign false into boolean variable
+                    result = false;
+                }
+            }
+        }
+        else {
+            
+            // If the length of two arrays is
+            // different then it will assign
+            // false into boolean variable
+            result = false;
+        }
+        
+        // After completion to check whether
+        // result is true of false
+        if (result == true) {
+            
+            // Print the result
+            System.out.println("Arrays are equal");
+        }
+        else {
+            
+            // Print the result
+            System.out.println("Arrays are not equal");
+        }
+    }
+
 }
